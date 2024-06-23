@@ -43,6 +43,59 @@ P.S. You can delete this when you're done too. It's your config now :)
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+--
+-- Shows line numbers
+vim.opt.number = true
+
+-- Shows relative line number from cursor
+vim.opt.relativenumber = true
+
+-- defaults to opening windows below
+vim.opt.splitbelow = true
+
+-- defaults vertical splits to the right
+vim.opt.splitright = true
+
+-- Disable line wrapping
+vim.opt.wrap = false
+
+-- Opting spaces over tabs makes nvim more predictable
+-- Nvim actually treats a certain number of spaces as
+-- tabs
+vim.opt.expandtab = true
+
+-- number of spaces per tab
+-- When saving, how it converts spaces to tabs
+vim.opt.tabstop = 4
+
+-- When indenting, this is how many spacs will be applied
+vim.opt.shiftwidth = 4
+
+-- syncs clipboard for system and nvim
+-- unnamedplus is the register that interacts
+-- with the system clipboard
+vim.opt.clipboard = "unnamedplus"
+
+-- keeps the cursor in the middle of the screen while scrolling
+vim.opt.scrolloff = 999
+
+-- Allows cursor to move into empyt spaces for mode specified
+vim.opt.virtualedit = "block"
+
+-- Shows changes that are being applied from search and replace
+-- in seperate window
+vim.opt.inccommand = "split"
+
+-- Ignores casing when typing in commands in nvim commands
+vim.opt.ignorecase = true
+
+-- Flips a GUI switch and makes terminal a bit more graphical
+-- Enables more color support. Highlighting rules are changed
+-- with this as well.
+vim.opt.termguicolors = true
+
+-- g stands for a vim global
+vim.g.mapleader = " "
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    https://github.com/folke/lazy.nvim
