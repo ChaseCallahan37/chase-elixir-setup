@@ -373,6 +373,9 @@ vim.o.termguicolors = true
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
+-- Makes closing buffers easier
+vim.keymap.set('n', '<leader>c', '<cmd>bd<cr>', { silent = true })
+
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -402,9 +405,6 @@ vim.keymap.set('n', 'K', '{', { silent = true })
 
 -- Remap for joining lines, since J is now a motion. But you can also leave this off and do :j as a command
 vim.keymap.set('n', 'gJ', '<cmd>join<cr>', { silent = true })
-
--- I have weird Emacs muscle memory, so you probably should use a different keybind for deleting buffers
-vim.keymap.set('n', '<c-x><c-k>', '<cmd>bd<cr>', { silent = true })
 
 -- I prefer cursor in the center
 vim.o.scrolloff = 999
